@@ -1,4 +1,4 @@
-package com.sunchaser.rpc.core.serialize;
+package com.sunchaser.shushan.serialize;
 
 import java.util.Objects;
 import java.util.stream.IntStream;
@@ -12,6 +12,9 @@ import java.util.stream.IntStream;
  */
 public enum ArrayElement {
 
+    /**
+     * 替换null
+     */
     NULL;
 
     public static void wrapArgs(Object[] args) {

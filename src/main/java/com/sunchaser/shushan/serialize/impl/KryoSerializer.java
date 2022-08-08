@@ -1,10 +1,10 @@
-package com.sunchaser.serialize.impl;
+package com.sunchaser.shushan.serialize.impl;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 import com.esotericsoftware.kryo.util.Pool;
-import com.sunchaser.serialize.Serializer;
+import com.sunchaser.shushan.serialize.Serializer;
 import lombok.SneakyThrows;
 
 import java.io.ByteArrayInputStream;
@@ -58,7 +58,7 @@ public class KryoSerializer implements Serializer {
      * @param obj 待序列化的对象
      * @return 序列化后的byte字节数组
      */
-    @SneakyThrows
+    @SneakyThrows({Throwable.class, Exception.class})
     @Override
     public <T> byte[] serialize(T obj) {
         Kryo kryo = null;
@@ -87,7 +87,7 @@ public class KryoSerializer implements Serializer {
      * @param clazz 待反序列化的class类型
      * @return 反序列化后的对象
      */
-    @SneakyThrows
+    @SneakyThrows({Throwable.class, Exception.class})
     @Override
     public <T> T deserialize(byte[] data, Class<T> clazz) {
         Kryo kryo = null;

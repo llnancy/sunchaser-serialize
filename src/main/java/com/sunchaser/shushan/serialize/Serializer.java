@@ -1,4 +1,4 @@
-package com.sunchaser.serialize;
+package com.sunchaser.shushan.serialize;
 
 /**
  * 序列化器

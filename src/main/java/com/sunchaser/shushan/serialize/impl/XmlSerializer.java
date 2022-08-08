@@ -1,6 +1,6 @@
-package com.sunchaser.serialize.impl;
+package com.sunchaser.shushan.serialize.impl;
 
-import com.sunchaser.serialize.Serializer;
+import com.sunchaser.shushan.serialize.Serializer;
 import lombok.SneakyThrows;
 
 import java.beans.XMLDecoder;
@@ -23,7 +23,7 @@ public class XmlSerializer implements Serializer {
      * @param obj 待序列化的对象
      * @return 序列化后的byte字节数组
      */
-    @SneakyThrows
+    @SneakyThrows({Throwable.class, Exception.class})
     @Override
     public <T> byte[] serialize(T obj) {
         try (ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -40,7 +40,7 @@ public class XmlSerializer implements Serializer {
      * @param clazz 待反序列化的class类型
      * @return 反序列化后的对象
      */
-    @SneakyThrows
+    @SneakyThrows({Throwable.class, Exception.class})
     @Override
     public <T> T deserialize(byte[] data, Class<T> clazz) {
         try (ByteArrayInputStream bis = new ByteArrayInputStream(data);

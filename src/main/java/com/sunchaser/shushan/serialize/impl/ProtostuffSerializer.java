@@ -1,7 +1,7 @@
-package com.sunchaser.serialize.impl;
+package com.sunchaser.shushan.serialize.impl;
 
 import com.google.common.collect.Maps;
-import com.sunchaser.serialize.Serializer;
+import com.sunchaser.shushan.serialize.Serializer;
 import io.protostuff.LinkedBuffer;
 import io.protostuff.ProtostuffIOUtil;
 import io.protostuff.Schema;
