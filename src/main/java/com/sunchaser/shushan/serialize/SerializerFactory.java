@@ -33,8 +33,8 @@ public class SerializerFactory {
      * 0000 0100
      * ......
      */
-    public static Serializer getSerializer(byte protocolInfo) {
-        return SerializerEnum.match((byte) (protocolInfo & 0xF)).getSerializer();
+    public static Serializer getSerializer(byte serialize) {
+        return SerializerEnum.match((byte) (serialize & 0xF)).getSerializer();
     }
 
     @Getter
